@@ -1,0 +1,156 @@
+/* Variáveis */
+:root {
+  --cor-primaria: #4CAF50;
+  --cor-secundaria: #81C784;
+  --cor-neutra-clara: #F5F5F5;
+  --cor-neutra-escura: #333;
+
+  --fonte-principal: 'Arial', sans-serif;
+
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-neutra-clara);
+  color: var(--cor-neutra-escura);
+}
+
+header {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: var(--esp-2);
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: var(--esp-2);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: var(--esp-4);
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: var(--esp-2);
+  border-radius: 8px;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: var(--esp-2) var(--esp-3);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.btn:active {
+  background-color: #388E3C;
+}
+
+.btn:disabled {
+  background-color: #A5D6A7;
+  cursor: not-allowed;
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+  justify-content: center;
+  padding: var(--esp-2);
+}
+
+.card-projeto {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-projeto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-projeto h3 {
+  margin: var(--esp-2) 0;
+}
+
+.card-projeto p {
+  margin: 0 var(--esp-2) var(--esp-2) var(--esp-2);
+}
+
+/* Formulário */
+form {
+  max-width: 500px;
+  margin: var(--esp-4) auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+}
+
+input, textarea {
+  padding: var(--esp-1);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+}
